@@ -1,0 +1,44 @@
+[
+	{
+		"name": "Mikail Pfingsten",
+		"presentations": [
+			"From Zero-to-Mobile App in Minutes with Realm",
+			"Mastering MongoDB Cloud Database Security"
+		]
+	},
+	{
+		"name": "Ceyda Wachenbrunner",
+		"presentations": [
+			"Combine-ing MongoDB Realm with SwiftUI",
+			"11 Patterns for Extreme MongoDB Performance and Scalability"
+		]
+	},
+	{
+		"name": "Nathalie Lenk",
+		"presentations": [
+			"Best Practices to Succeed with MongoDB Atlas",
+			"MongoDB Charts: What's New, What's Coming?",
+			"Building Interactive Experiences with the MongoDB Charts Embedding SDK",
+			"Building Great Games with MongoDB"
+		]
+	},
+	{
+		"name": "Dominic Benninger",
+		"presentations": [
+			"Taking Sharding and Scale-Out to the Next Level with Live Resharding",
+			"Sequencing the Coronavirus Using MongoDB Atlas"
+		]
+	},
+	{
+		"name": "Berkay Winkler",
+		"presentations": [
+			"MongoDB Demo with Digital Ocean"
+		]
+	},
+	{
+		"name": "Mattes Rahn",
+		"presentations": [
+			"Multi-Cloud IoT Projects with MongoDB and PeerIslands"
+		]
+	}
+]
