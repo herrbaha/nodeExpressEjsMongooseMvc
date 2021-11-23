@@ -22,18 +22,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/speakers', async (req, res) => {
-	const speakers = await SpeakersController.getAllSpeakers();
 	res.render('speakers', {
 		pageTitle: "Speakers",
-		speakers
+		speakers: await SpeakersController.getAllSpeakers()
 	});
 });
 
 app.get('/presentations', async (req, res) => {
-	const presentations = await PresentationsController.getAllPresentations();
 	res.render('presentations', {
-		pageTitle: "Presentations",
-		presentations
+		pageTitle: await PresentationsController.getPageTitle(),
+		presentations: await PresentationsController.getAllPresentations()
 	});
 });
 
