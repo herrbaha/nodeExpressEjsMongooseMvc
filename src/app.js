@@ -31,7 +31,7 @@ app.get('/presentations', async (req, res) => {
 	const presentations = await PresentationsController.getAllPresentations();
 	res.render('presentations', {
 		pageTitle: "Presentations",
-		presentations: presentations
+		presentations
 	});
 });
 

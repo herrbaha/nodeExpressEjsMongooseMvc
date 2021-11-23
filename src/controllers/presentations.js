@@ -1,4 +1,4 @@
-import PresentationModel from '../models/speakers.js';
+import PresentationModel from '../models/presentations.js';
 
 export const getAllPresentations = async () => {
 	const presentations = await PresentationModel.find({});

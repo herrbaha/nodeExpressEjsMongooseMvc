@@ -3,8 +3,9 @@ import mongoose from 'mongoose';
 mongoose.connect('mongodb://localhost:27017/mongoConference');
 
 const presentationSchema = mongoose.Schema({
-	name: String
+	title: String,
+	room: String
 });
-const PresentationModel = mongoose.model("Speaker", presentationSchema);
+const PresentationModel = mongoose.model("Presentation", presentationSchema);
 
 export default PresentationModel;
