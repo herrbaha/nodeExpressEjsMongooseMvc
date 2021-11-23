@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
-// import * as SpeakersController from './controllers/speakers.js';
-// import * as PresentationsController from './controllers/presentations.js';
+import * as SpeakersController from './controllers/speakers.js';
+import * as PresentationsController from './controllers/presentations.js';
 import mongoose from 'mongoose';
 
 mongoose.connect('mongodb://localhost:27017/mongoConference');
@@ -24,16 +24,16 @@ app.get('/', (req, res) => {
 app.get('/speakers', async (req, res) => {
 	res.render('speakers', {
 		pageTitle: "Speakers",
-		// speakers: await SpeakersController.getAllSpeakers()
+		speakers: await SpeakersController.getAllSpeakers()
 	});
 });
 
-// app.get('/presentations', async (req, res) => {
-// 	res.render('presentations', {
-// 		pageTitle: await PresentationsController.getPageTitle(),
-// 		presentations: await PresentationsController.getAllPresentations()
-// 	});
-// });
+app.get('/presentations', async (req, res) => {
+	res.render('presentations', {
+		pageTitle: await PresentationsController.getPageTitle(),
+		presentations: await PresentationsController.getAllPresentations()
+	});
+});
 
 app.listen(port, () => {
 	console.log(`Now listening on port http://localhost:${port}`);
