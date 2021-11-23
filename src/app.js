@@ -1,8 +1,10 @@
 import express from 'express';
 import path from 'path';
-
 import * as SpeakersController from './controllers/speakers.js';
 import * as PresentationsController from './controllers/presentations.js';
+import mongoose from 'mongoose';
+
+mongoose.connect('mongodb://localhost:27017/mongoConference');
 
 const app = express();
 const __dirname = path.resolve(path.dirname(''));
