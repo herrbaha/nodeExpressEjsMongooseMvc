@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 
 import * as SpeakersController from './controllers/speakers.js';
+import * as PresentationsController from './controllers/presentations.js';
 
 const app = express();
 const __dirname = path.resolve(path.dirname(''));
@@ -26,9 +27,11 @@ app.get('/speakers', async (req, res) => {
 	});
 });
 
-app.get('/presentations', (req, res) => {
+app.get('/presentations', async (req, res) => {
+	const presentations = await PresentationsController.getAllPresentations();
 	res.render('presentations', {
-		pageTitle: "Presentations"
+		pageTitle: "Presentations",
+		presentations: presentations
 	});
 });
 
