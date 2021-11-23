@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import mongoose from 'mongoose';
 
+
+
 mongoose.connect('mongodb://localhost:27017/mongoConference');
 const speakerSchema = mongoose.Schema({
 	name: String,
