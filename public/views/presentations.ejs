@@ -3,4 +3,12 @@
 		<%=pageTitle%>
 	</h2>
 	<p>This page displays all the presentations at the conference.</p>
+	<ul>
+		<% presentations.forEach(presentation => { %>
+			<li>
+				<%=presentation.name%>
+			</li>
+			<% });
+			   %>
+	</ul>
 	<%- include('_footer.ejs')%>
