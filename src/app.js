@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import * as SpeakersController from './controllers/speakers.js';
+import * as SponsorsController from './controllers/sponsors.js';
 import * as PresentationsController from './controllers/presentations.js';
 import mongoose from 'mongoose';
 
@@ -34,6 +35,13 @@ app.get('/presentations', async (req, res) => {
 		presentations: await PresentationsController.getAllPresentations()
 	});
 });
+app.get('/sponsors', async (req, res) => {
+	res.render('sponsors', {
+		pageTitle: "Sponsors",
+		sponsors: await SponsorsController.getAllSponsors()
+	});
+});
+
 
 app.listen(port, () => {
 	console.log(`Now listening on port http://localhost:${port}`);
