@@ -29,18 +29,20 @@ app.get('/speakers', async (req, res) => {
 	});
 });
 
-app.get('/presentations', async (req, res) => {
-	res.render('presentations', {
-		pageTitle: await PresentationsController.getPageTitle(),
-		presentations: await PresentationsController.getAllPresentations()
-	});
-});
 app.get('/sponsors', async (req, res) => {
 	res.render('sponsors', {
 		pageTitle: "Sponsors",
 		sponsors: await SponsorsController.getAllSponsors()
 	});
 });
+
+app.get('/presentations', async (req, res) => {
+	res.render('presentations', {
+		pageTitle: await PresentationsController.getPageTitle(),
+		presentations: await PresentationsController.getAllPresentations()
+	});
+});
+
 
 
 app.listen(port, () => {
