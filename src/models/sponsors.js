@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 
-const speakerSchema = mongoose.Schema({
+const sponsorSchema = mongoose.Schema({
 	name: String
 });
-const SpeakerModel = mongoose.model("Speaker", speakerSchema);
+const SponsorModel = mongoose.model("Sponsor", sponsorSchema);
 
-export default SpeakerModel;
+export default SponsorModel;
